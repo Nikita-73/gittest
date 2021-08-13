@@ -1,0 +1,294 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+* {
+padding: 0;
+margin: 0;
+border: 0; }
+
+*, *:before, *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box; }
+
+:focus, :active {
+outline: none; }
+
+a:focus, a:active {
+outline: none; }
+
+nav, footer, header, aside {
+display: block; }
+
+html, body {
+height: 100%;
+width: 100%;
+font-size: 100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+font-family: inherit; }
+
+input::-ms-clear {
+display: none; }
+
+button {
+cursor: pointer; }
+
+button::-moz-focus-inner {
+padding: 0;
+border: 0; }
+
+a, a:visited {
+text-decoration: none; }
+
+a:hover {
+text-decoration: none; }
+
+ul li {
+list-style: none; }
+
+img {
+vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+font-size: inherit;
+font-weight: inherit; }
+
+/*--------------------*/
+
+
+
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(175px, auto) 1fr minmax(126px, auto) / 1fr ;
+	grid-template-areas: 
+		"header"
+		"main"
+		"footer";
+
+	.header {
+		grid-area: header;
+		padding: 15px;
+		display: grid;
+		grid-template: 1fr 1fr 1fr / 1fr minmax(82px, auto) minmax(221px, auto) minmax(340px, auto) minmax(208px, auto) minmax(93px, auto) 1fr ;
+		background-color: white;
+
+		&__logotextup {
+			grid-column: 4/5;
+			grid-row: 1/2;
+			padding-top: 7px;
+			justify-self: center;
+			font-family: Bebas;
+			font-size: 15px;
+			line-height: 25px;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: #000;
+		}
+
+		&__logoimg {
+			grid-column: 4/5;
+			grid-row: 2/3;
+			display: block;
+			position: relative;
+			left: 56px;
+			bottom: 15px;
+
+		}
+
+		&__logotexdown {
+			grid-column: 4/5;
+			grid-row: 3/4;
+			justify-self: center;
+			align-self: center;
+			font-family: Bebas;
+			font-size: 8px;
+			line-height: 25px;
+			font-weight: 550;
+			text-transform: uppercase;
+			letter-spacing: 1.0em;
+			color: #000000;
+		}
+
+			&__language {
+				grid-column: 2/3;
+				grid-row: 1/2;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&__smenlanguage {
+				font-family: Bebas;
+				font-size: 10px;
+				line-height: 25px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #000;
+			}
+
+			&__onlineorder {
+				grid-column: 6/7;
+				grid-row: 1/2;
+				text-align: end;
+				font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+				font-size: 15px;
+				line-height: 25px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: #000000;
+				
+			}
+
+			&__listfirst {
+				grid-column: 2/4;
+				grid-row: 2/3;
+				display: flex;
+				justify-content: space-between;	
+			}
+
+			&__link {
+				font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+				font-size: 15px;
+				line-height: 25px;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #000000;
+			}
+
+			&__listsecond {
+				grid-column: 5/7;
+				grid-row: 2/3;
+				display: flex;
+				justify-content: space-between;
+			}
+	}
+
+	.main {
+		grid-area: main;
+		background-color: white;
+		display: grid;
+		grid-template: minmax(425px, auto) minmax(675px, auto) minmax(150px, auto) minmax(350px, auto) minmax(213px, auto) minmax(475px, auto) / 1fr;
+		grid-template-areas: 
+			"entry" 
+			"menu" 
+			"choice" 
+			"arguments" 
+			"contacts" 
+			"form";
+
+		.entry {
+			grid-area: entry;
+			display: grid;
+			grid-template: 1fr/ 1fr minmax(683px, auto) minmax(683px, auto) 1fr;
+			&__photo {
+				grid-column: 2/3;
+				display: block;
+			}
+
+			&__private {
+				grid-column: 3/4;
+				background-color: #000;
+			}
+
+			&__logo {
+				margin: 82px 0px 0px 62px;
+				max-width: 200px;
+				color: white;
+				font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+				font-size: 50px;
+				line-height: 50px;
+				font-weight: 400;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #ffffff;
+			}
+
+			&__text {
+				margin: 37px 0px 0px 59px;
+				max-width: 303px;
+				color: white;
+				font-family: 'PT Sans';
+				font-size: 15px;
+				line-height: 25px;
+				font-weight: 400;
+				color: #ffffff;
+			}
+
+			&__left {
+				margin: 55px 0px 0px 60px;
+				padding: 18px 34px 17px 33px;
+				background: white;
+				font-family: Bebas;
+				font-size: 15px;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+			&__right {
+				margin: 55px 0px 0px 13px;				
+				font-family: Bebas;
+				font-size: 15px;
+				line-height: 25px;
+				font-weight: 400;
+				text-decoration: underline;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: #fffffe;
+			}
+		}
+		.menu {
+			grid-area: menu;
+			display: flex;
+
+			.menu-list {
+				margin-top: 75px;
+				justify-content: center;
+
+				&__one {
+				}
+		
+				&__logoone {
+				}
+		
+				&__textone {
+				}
+		
+				&__butt {
+				}
+		
+				&__hrefone {
+				}
+			}
+		
+		}
+		.choice {
+			grid-area: choice;
+			background-color: azure;
+		}
+		.arguments {
+			grid-area: arguments;
+			background-color: #000;
+		}
+		.contacts {
+			grid-area: contacts;
+			background-color: brown;
+		}
+		.form {
+			grid-area: form;
+			border-color: coral;
+		}
+
+	}
+	.footer {
+		grid-area: footer;
+	}
+
+}

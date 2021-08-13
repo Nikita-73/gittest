@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.wrapper {
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(175px, auto) 1fr minmax(126px, auto);
+  -ms-grid-columns: 1fr;
+      grid-template: minmax(175px, auto) 1fr minmax(126px, auto)/1fr;
+      grid-template-areas: "header" "main" "footer";
+}
+
+.wrapper .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr minmax(82px, auto) minmax(221px, auto) minmax(340px, auto) minmax(208px, auto) minmax(93px, auto) 1fr;
+      grid-template: 1fr 1fr 1fr/1fr minmax(82px, auto) minmax(221px, auto) minmax(340px, auto) minmax(208px, auto) minmax(93px, auto) 1fr;
+  background-color: white;
+}
+
+.wrapper .header__logotextup {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  padding-top: 7px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: Bebas;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+.wrapper .header__logoimg {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: block;
+  position: relative;
+  left: 56px;
+  bottom: 15px;
+}
+
+.wrapper .header__logotexdown {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: Bebas;
+  font-size: 8px;
+  line-height: 25px;
+  font-weight: 550;
+  text-transform: uppercase;
+  letter-spacing: 1.0em;
+  color: #000000;
+}
+
+.wrapper .header__language {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .header__smenlanguage {
+  font-family: Bebas;
+  font-size: 10px;
+  line-height: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+.wrapper .header__onlineorder {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6/7;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  text-align: end;
+  font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.wrapper .header__listfirst {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .header__link {
+  font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.wrapper .header__listsecond {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: minmax(425px, auto) minmax(675px, auto) minmax(150px, auto) minmax(350px, auto) minmax(213px, auto) minmax(475px, auto);
+  -ms-grid-columns: 1fr;
+      grid-template: minmax(425px, auto) minmax(675px, auto) minmax(150px, auto) minmax(350px, auto) minmax(213px, auto) minmax(475px, auto)/1fr;
+      grid-template-areas: "entry"  "menu"  "choice"  "arguments"  "contacts"  "form";
+}
+
+.wrapper .main .entry {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: entry;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr minmax(683px, auto) minmax(683px, auto) 1fr;
+      grid-template: 1fr/1fr minmax(683px, auto) minmax(683px, auto) 1fr;
+}
+
+.wrapper .main .entry__photo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: block;
+}
+
+.wrapper .main .entry__private {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  background-color: #000;
+}
+
+.wrapper .main .entry__logo {
+  margin: 82px 0px 0px 62px;
+  max-width: 200px;
+  color: white;
+  font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.wrapper .main .entry__text {
+  margin: 37px 0px 0px 59px;
+  max-width: 303px;
+  color: white;
+  font-family: 'PT Sans';
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.wrapper .main .entry__left {
+  margin: 55px 0px 0px 60px;
+  padding: 18px 34px 17px 33px;
+  background: white;
+  font-family: Bebas;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.wrapper .main .entry__right {
+  margin: 55px 0px 0px 13px;
+  font-family: Bebas;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fffffe;
+}
+
+.wrapper .main .menu {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .main .menu .menu-list {
+  margin-top: 75px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .main .choice {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: choice;
+  background-color: azure;
+}
+
+.wrapper .main .arguments {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: arguments;
+  background-color: #000;
+}
+
+.wrapper .main .contacts {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: contacts;
+  background-color: brown;
+}
+
+.wrapper .main .form {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: form;
+  border-color: coral;
+}
+
+.wrapper .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
