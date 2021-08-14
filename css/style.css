@@ -331,6 +331,26 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: center;
 }
 
+.wrapper .main .menu .menu-list__one {
+  font-size: 10px;
+}
+
+.wrapper .main .menu .menu-list__logoone {
+  font-size: 10px;
+}
+
+.wrapper .main .menu .menu-list__textone {
+  font-size: 10px;
+}
+
+.wrapper .main .menu .menu-list__butt {
+  font-size: 10px;
+}
+
+.wrapper .main .menu .menu-list__hrefone {
+  font-size: 10px;
+}
+
 .wrapper .main .choice {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
